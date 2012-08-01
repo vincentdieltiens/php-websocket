@@ -71,7 +71,7 @@ class Socket
 	// method originally found in phpws project:
 	protected function readBuffer($resource)
 	{
-		if($this->ssl === true)
+		if($this->ssl !== null )
 		{
 			$buffer = fread($resource, 8192);
 			// extremely strange chrome behavior: first frame with ssl only contains 1 byte?!
